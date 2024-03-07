@@ -26,7 +26,4 @@ router.route("/login").post(loginUser)
 router.route("/logout").post(verifyJWT,  logoutUser)
 
 
-router.route("/avatar").patch(verifyJWT, upload.single("avatar"), updateUserAvatar)
-
-
 export default router

@@ -1,7 +1,7 @@
 import { asyncHandler } from "../utlis/asyncHandler.js";
 import {ApiError} from "../utlis/ApiError.js"
 import { User} from "../models/user.model.js"
-import {uploadOnCloudinary} from "../utils/cloudinary.js"
+import {uploadOnCloudinary} from "../utlis/cloudinary.js"
 import { ApiResponse } from "../utlis/ApiResponse.js";
 import jwt from "jsonwebtoken"
 import mongoose from "mongoose";
@@ -105,6 +105,12 @@ const loginUser = asyncHandler(async (req, res) =>{
         throw new ApiError(400, "username or email is required")
     } 
 
+    // Here is an alternative of above code based on logic discussed in video:
+    // if (!(username || email)) {
+    //     throw new ApiError(400, "username or email is required")
+        
+    // }
+    
     const user = await User.findOne({
         $or: [{username}, {email}]
     })
