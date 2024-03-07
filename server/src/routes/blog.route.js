@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { 
-    createBlog,  
+    createBlog,
+    getAllBlogs  
 } from "../controllers/blog.controller.js";
 import {upload} from "../middlewares/multer.middleware.js"
 
@@ -16,6 +17,8 @@ router.route("/create").post(
     ]),
     createBlog
     )
+
+router.route("/getall").get(getAllBlogs)    
 
 
 export default router

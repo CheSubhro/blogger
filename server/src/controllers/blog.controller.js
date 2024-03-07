@@ -66,10 +66,31 @@ const createBlog = asyncHandler( async (req, res) => {
 
 } )
 
+const getAllBlogs = asyncHandler( async (req, res) =>{
 
+    try {
+        const allblogs = await Blog.find();
+
+        if (!allblogs || allblogs.length === 0) {
+            throw new ApiError(404, "No blogs found");
+        }
+    
+        return res.status(200).json(
+            new ApiResponse(200, allblogs, "All Blogs Retrieved Successfully")
+        )
+        
+    } catch (error) {
+        
+        console.error(error.message);
+        const statusCode = error.statusCode || 500;
+        res.status(statusCode).json(new ApiResponse(statusCode, null, error.message));
+    }
+
+})
 
 
 
 export {
-    createBlog
+    createBlog,
+    getAllBlogs
 }
