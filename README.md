@@ -17,5 +17,5 @@ This is a simple CRUD (Create, Read, Update, Delete) application built with Expr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/express-crud-app.git
+   git clone https://github.com/CheSubhro/blogger.git
 
