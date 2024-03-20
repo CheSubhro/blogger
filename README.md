@@ -35,7 +35,6 @@ Please go to the .env.sample
 ## Contributing:
 Contributions are welcome! Feel free to submit pull requests or open issues for bug fixes, feature requests, or improvements
 
-## License:
-This project is licensed under the MIT License. See the LICENSE file for details
+
 
 
