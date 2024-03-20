@@ -4,12 +4,12 @@ This is a simple CRUD (Create, Read, Update, Delete) application built with Expr
 
 ## Features:
 
-- User authentication with JSON Web Tokens (JWT).
-- Image upload to Cloudinary.
-- Password hashing with bcrypt.
+- User authentication with **JSON Web Tokens (JWT)**.
+- Image upload to **Cloudinary**.
+- Password hashing with **bcrypt**.
 - Middleware for parsing cookies.
-- Mongoose for MongoDB database interaction.
-- Multer for handling file uploads.
+- **Mongoose** for MongoDB database interaction.
+- **Multer** for handling file uploads.
 - Slug generation for SEO-friendly URLs.
 
 ## Installation:
